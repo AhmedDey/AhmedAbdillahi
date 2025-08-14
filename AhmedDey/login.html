@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WattFlow – Système de gestion énergétique gouvernemental</title>
+    <link rel="stylesheet" href="CSS/login.css" />
+    <link rel="icon" type="image/x-icon" href="IMG/wattflow.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.addEventListener("scroll", function () {
+        var menu = document.getElementById("head");
+        var top = window.scrollY;
+        if (top > 35) {
+          menu.classList.add("fixed");
+        } else {
+          menu.classList.remove("fixed");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="page-login">
+      <div class="login_content">
+        <header class="top_login">
+          <div class="logo_pay">
+            <img src="IMG/djib.jpg" alt="République de Djibouti" />
+          </div>
+          <div class="list_lang">
+            <a href="login.php?l=fr"
+              ><img src="IMG/lang-fr.png" alt="Français" /> Fr</a
+            >
+            <a href="login.php?l=ar"
+              ><img src="IMG/lang-ae.png" alt="العربية" /> Ar</a
+            >
+          </div>
+        </header>
+
+        <div class="login_form">
+          <div class="logo_top">
+            <img src="IMG/logo_w.png" alt="WattFlow Logo" />
+          </div>
+          <h2>Connexion à votre espace</h2>
+          <form action="clog.php" method="post">
+            <input
+              type="text"
+              name="log"
+              id="log"
+              placeholder="Identifiant"
+              required
+            />
+            <input
+              type="password"
+              name="pwd"
+              id="pwd"
+              placeholder="Mot de passe"
+              required
+            />
+            <input type="submit" value="Se connecter" />
+          </form>
+        </div>
+
+        <footer class="footer-copyright">
+          <p>
+            © <span id="currentYear"></span> <strong>WattFlow</strong> – Tous
+            droits réservés à <strong>DDS – Djib Data Sécurité</strong>.
+          </p>
+        </footer>
+      </div>
+      <div id="description">
+        <h2>Bienvenue sur WattFlow</h2>
+        <p>
+          WattFlow est un système de gestion énergétique gouvernemental conçu
+          pour optimiser la consommation d'énergie et améliorer la durabilité
+          des infrastructures publiques.
+        </p>
+        <p>
+          <a
+            href="DOC/Wattflow_Fiche_Descriptive.pdf"
+            class="btn-download"
+            download
+          >
+            <i class="fa-solid fa-file-pdf"></i> Télécharger la fiche
+            descriptive
+          </a>
+        </p>
+        <p>
+          Pour toute assistance, veuillez contacter notre équipe de support à
+          l'adresse email :
+        </p>
+      </div>
+    </div>
+    <script src="JS/loginJs.js"></script>
+    <script>
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
